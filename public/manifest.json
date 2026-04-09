@@ -1,0 +1,25 @@
+{
+  "name": "Trollii",
+  "short_name": "Trollii",
+  "description": "Smart meal planning, live supermarket prices, and AI-powered budget tracking.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#070a05",
+  "theme_color": "#070a05",
+  "categories": ["food", "lifestyle", "shopping", "productivity"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
