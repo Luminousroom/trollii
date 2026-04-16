@@ -105,124 +105,124 @@ const saveFile = async (filename, content, mimeType) => {
 
 
 const MEALS_DB = [
-  { id:1,name:"Grilled Chicken & Roasted Vegetables",category:"Protein-Rich",health:9,tags:["gluten-free"],
+  { id:1,img:"🍗",name:"Grilled Chicken & Roasted Vegetables",category:"Protein-Rich",health:9,tags:["gluten-free"],
     method:["Season chicken breasts with salt, pepper, and olive oil.","Chop broccoli, bell peppers, and garlic.","Roast vegetables at 200°C/400°F for 20 mins.","Grill chicken for 6-7 mins each side until cooked through.","Serve chicken sliced over the roasted vegetables."],
     baseIngredients:[{name:"Chicken Breast",amount:"500g",basePrice:5.50,aisle:"Meat"},{name:"Broccoli",amount:"1 head",basePrice:1.20,aisle:"Produce"},{name:"Bell Peppers",amount:"3",basePrice:2.10,aisle:"Produce"},{name:"Olive Oil",amount:"2 tbsp",basePrice:0.40,aisle:"Oils"},{name:"Garlic",amount:"3 cloves",basePrice:0.30,aisle:"Produce"}]},
-  { id:2,name:"Turkey Meatballs with Pasta",category:"Protein-Rich",health:7,tags:[],
+  { id:2,img:"🧆",name:"Turkey Meatballs with Pasta",category:"Protein-Rich",health:7,tags:[],
     method:["Mix turkey mince with breadcrumbs, egg, and seasoning. Roll into balls.","Fry meatballs until browned all over, about 8 mins.","Simmer passata with garlic and basil for 10 mins.","Cook penne pasta according to packet instructions.","Add meatballs to sauce, serve over pasta with fresh basil."],
     baseIngredients:[{name:"Turkey Mince",amount:"500g",basePrice:4.00,aisle:"Meat"},{name:"Penne Pasta",amount:"400g",basePrice:1.20,aisle:"Pasta & Rice"},{name:"Passata",amount:"500g",basePrice:0.90,aisle:"Tinned Goods"},{name:"Breadcrumbs",amount:"50g",basePrice:0.40,aisle:"Bakery"},{name:"Egg",amount:"1",basePrice:0.30,aisle:"Dairy"},{name:"Basil",amount:"bunch",basePrice:0.70,aisle:"Produce"}]},
-  { id:3,name:"Lemon Herb Chicken Thighs",category:"Protein-Rich",health:8,tags:["gluten-free"],
+  { id:3,img:"🍋",name:"Lemon Herb Chicken Thighs",category:"Protein-Rich",health:8,tags:["gluten-free"],
     method:["Marinate chicken thighs with lemon juice, rosemary, salt and pepper.","Halve new potatoes and toss in olive oil.","Roast potatoes at 200°C for 15 mins, then add chicken.","Roast together for 25-30 mins until golden.","Steam green beans and serve alongside."],
     baseIngredients:[{name:"Chicken Thighs",amount:"600g",basePrice:4.20,aisle:"Meat"},{name:"Lemon",amount:"2",basePrice:0.80,aisle:"Produce"},{name:"Fresh Rosemary",amount:"sprigs",basePrice:0.60,aisle:"Produce"},{name:"New Potatoes",amount:"500g",basePrice:1.00,aisle:"Produce"},{name:"Green Beans",amount:"200g",basePrice:1.20,aisle:"Produce"}]},
-  { id:4,name:"Steak with Peppercorn Sauce",category:"Protein-Rich",health:7,tags:["gluten-free"],
+  { id:4,img:"🥩",name:"Steak with Peppercorn Sauce",category:"Protein-Rich",health:7,tags:["gluten-free"],
     method:["Season steaks generously with salt.","Sear in a very hot pan for 3-4 mins each side for medium.","Rest steaks for 5 mins while making sauce.","Crush peppercorns, toast in pan, add cream and reduce.","Serve with chips and salad."],
     baseIngredients:[{name:"Sirloin Steak",amount:"2 x 250g",basePrice:8.00,aisle:"Meat"},{name:"Double Cream",amount:"150ml",basePrice:0.90,aisle:"Dairy"},{name:"Peppercorns",amount:"1 tbsp",basePrice:0.30,aisle:"Spices"},{name:"Chips/Fries",amount:"500g",basePrice:1.50,aisle:"Frozen"},{name:"Salad Leaves",amount:"100g",basePrice:1.00,aisle:"Produce"}]},
-  { id:5,name:"Spaghetti Bolognese",category:"Classic",health:6,tags:[],
+  { id:5,img:"🍝",name:"Spaghetti Bolognese",category:"Classic",health:6,tags:[],
     method:["Finely dice onion, carrot, and garlic.","Brown beef mince in a large pan, breaking up lumps.","Add diced vegetables and cook for 5 mins.","Pour in tinned tomatoes, season, and simmer for 30 mins.","Cook spaghetti and serve topped with sauce."],
     baseIngredients:[{name:"Beef Mince",amount:"500g",basePrice:5.00,aisle:"Meat"},{name:"Spaghetti",amount:"400g",basePrice:1.50,aisle:"Pasta & Rice"},{name:"Tinned Tomatoes",amount:"400g",basePrice:0.80,aisle:"Tinned Goods"},{name:"Onion",amount:"1",basePrice:0.25,aisle:"Produce"},{name:"Garlic",amount:"2 cloves",basePrice:0.20,aisle:"Produce"},{name:"Carrot",amount:"1",basePrice:0.20,aisle:"Produce"}]},
-  { id:6,name:"Beef Tacos",category:"Classic",health:6,tags:["gluten-free"],
+  { id:6,img:"🌮",name:"Beef Tacos",category:"Classic",health:6,tags:["gluten-free"],
     method:["Brown beef mince with taco seasoning.","Warm taco shells in the oven for 3 mins.","Shred lettuce and dice tomatoes.","Grate cheese and prepare sour cream.","Fill shells with beef, top with salad, cheese and cream."],
     baseIngredients:[{name:"Beef Mince",amount:"400g",basePrice:4.50,aisle:"Meat"},{name:"Corn Taco Shells",amount:"8 pack",basePrice:1.80,aisle:"World Foods"},{name:"Lettuce",amount:"1/2 head",basePrice:0.50,aisle:"Produce"},{name:"Tomatoes",amount:"2",basePrice:0.60,aisle:"Produce"},{name:"Cheddar Cheese",amount:"100g",basePrice:1.50,aisle:"Dairy"},{name:"Sour Cream",amount:"150ml",basePrice:1.00,aisle:"Dairy"}]},
-  { id:7,name:"Shepherd's Pie",category:"Classic",health:6,tags:["gluten-free"],
+  { id:7,img:"🥧",name:"Shepherd's Pie",category:"Classic",health:6,tags:["gluten-free"],
     method:["Peel and boil potatoes until tender, then mash with butter.","Brown lamb mince with diced onion and carrots.","Add peas and stock, simmer for 15 mins.","Transfer to a baking dish, top with mashed potato.","Bake at 200°C for 25 mins until golden on top."],
     baseIngredients:[{name:"Lamb Mince",amount:"500g",basePrice:5.50,aisle:"Meat"},{name:"Potatoes",amount:"700g",basePrice:1.00,aisle:"Produce"},{name:"Carrots",amount:"2",basePrice:0.30,aisle:"Produce"},{name:"Frozen Peas",amount:"150g",basePrice:0.80,aisle:"Frozen"},{name:"Onion",amount:"1",basePrice:0.25,aisle:"Produce"},{name:"Butter",amount:"30g",basePrice:0.25,aisle:"Dairy"}]},
-  { id:8,name:"Chicken Fajitas",category:"Classic",health:7,tags:[],
+  { id:8,img:"🌯",name:"Chicken Fajitas",category:"Classic",health:7,tags:[],
     method:["Slice chicken, peppers and onion into strips.","Toss chicken with fajita spice and cook until golden.","Sauté peppers and onions until softened.","Warm tortillas in a dry pan or microwave.","Assemble with chicken, veg, and sour cream."],
     baseIngredients:[{name:"Chicken Breast",amount:"400g",basePrice:4.50,aisle:"Meat"},{name:"Flour Tortillas",amount:"8 pack",basePrice:1.50,aisle:"Bakery"},{name:"Bell Peppers",amount:"3",basePrice:2.10,aisle:"Produce"},{name:"Onion",amount:"1",basePrice:0.25,aisle:"Produce"},{name:"Fajita Spice Mix",amount:"1 sachet",basePrice:0.60,aisle:"Spices"},{name:"Sour Cream",amount:"150ml",basePrice:1.00,aisle:"Dairy"}]},
-  { id:9,name:"Fish & Chips",category:"Classic",health:5,tags:[],
+  { id:9,img:"🐟",name:"Fish & Chips",category:"Classic",health:5,tags:[],
     method:["Peel and cut potatoes into chips, par-boil for 5 mins.","Make batter with flour, water, and seasoning.","Heat oil to 180°C. Fry chips until golden.","Dip cod in batter and fry for 5-6 mins until crispy.","Serve with mushy peas and lemon wedges."],
     baseIngredients:[{name:"Cod Fillets",amount:"400g",basePrice:4.50,aisle:"Fish"},{name:"Plain Flour",amount:"200g",basePrice:0.30,aisle:"Baking"},{name:"Potatoes",amount:"600g",basePrice:0.80,aisle:"Produce"},{name:"Mushy Peas",amount:"300g",basePrice:0.70,aisle:"Tinned Goods"},{name:"Vegetable Oil",amount:"500ml",basePrice:1.20,aisle:"Oils"},{name:"Lemon",amount:"1",basePrice:0.40,aisle:"Produce"}]},
-  { id:10,name:"Vegetable Stir Fry with Tofu",category:"Plant-Based",health:10,tags:["vegan","gluten-free"],
+  { id:10,img:"🥘",name:"Vegetable Stir Fry with Tofu",category:"Plant-Based",health:10,tags:["vegan","gluten-free"],
     method:["Press tofu for 15 mins, then cube and pan-fry until golden.","Cook rice according to packet instructions.","Stir fry mixed vegetables in sesame oil on high heat.","Add tamari and toss with tofu.","Serve over rice with extra tamari if desired."],
     baseIngredients:[{name:"Firm Tofu",amount:"400g",basePrice:2.50,aisle:"Chilled"},{name:"Mixed Stir Fry Veg",amount:"400g",basePrice:2.00,aisle:"Produce"},{name:"Tamari",amount:"2 tbsp",basePrice:0.40,aisle:"World Foods"},{name:"Rice",amount:"300g",basePrice:0.80,aisle:"Pasta & Rice"},{name:"Sesame Oil",amount:"1 tbsp",basePrice:0.25,aisle:"Oils"}]},
-  { id:11,name:"Lentil & Vegetable Soup",category:"Plant-Based",health:9,tags:["vegan","gluten-free"],
+  { id:11,img:"🍲",name:"Lentil & Vegetable Soup",category:"Plant-Based",health:9,tags:["vegan","gluten-free"],
     method:["Dice onion, carrots, and celery.","Sauté in a large pot with a little oil for 5 mins.","Add red lentils and vegetable stock, bring to boil.","Simmer for 25 mins until lentils are soft.","Season well and blend partially for a chunky texture."],
     baseIngredients:[{name:"Red Lentils",amount:"250g",basePrice:1.00,aisle:"Pulses"},{name:"Carrots",amount:"3",basePrice:0.40,aisle:"Produce"},{name:"Celery",amount:"3 sticks",basePrice:0.50,aisle:"Produce"},{name:"Onion",amount:"1",basePrice:0.25,aisle:"Produce"},{name:"Vegetable Stock",amount:"1L",basePrice:0.60,aisle:"Tinned Goods"}]},
-  { id:12,name:"Chickpea & Spinach Curry",category:"Plant-Based",health:9,tags:["vegan","gluten-free"],
+  { id:12,img:"🍛",name:"Chickpea & Spinach Curry",category:"Plant-Based",health:9,tags:["vegan","gluten-free"],
     method:["Sauté diced onion until soft.","Add curry paste and cook for 1 min until fragrant.","Pour in coconut milk and drained chickpeas, simmer 15 mins.","Stir in spinach until wilted.","Serve over steamed rice."],
     baseIngredients:[{name:"Chickpeas",amount:"400g tin",basePrice:0.80,aisle:"Tinned Goods"},{name:"Coconut Milk",amount:"400ml",basePrice:1.20,aisle:"World Foods"},{name:"Spinach",amount:"200g",basePrice:1.00,aisle:"Produce"},{name:"Onion",amount:"1",basePrice:0.25,aisle:"Produce"},{name:"Curry Paste",amount:"2 tbsp",basePrice:0.50,aisle:"World Foods"},{name:"Rice",amount:"300g",basePrice:0.80,aisle:"Pasta & Rice"}]},
-  { id:13,name:"Bean & Avocado Burrito Bowl",category:"Plant-Based",health:9,tags:["vegan","gluten-free"],
+  { id:13,img:"🥑",name:"Bean & Avocado Burrito Bowl",category:"Plant-Based",health:9,tags:["vegan","gluten-free"],
     method:["Cook rice and season with lime juice.","Heat black beans with cumin and a pinch of chilli.","Drain sweetcorn and warm through.","Slice avocado and prepare salsa.","Assemble bowls with rice, beans, corn, avocado and salsa."],
     baseIngredients:[{name:"Black Beans",amount:"400g tin",basePrice:0.80,aisle:"Tinned Goods"},{name:"Avocado",amount:"1",basePrice:1.50,aisle:"Produce"},{name:"Rice",amount:"200g",basePrice:0.50,aisle:"Pasta & Rice"},{name:"Sweetcorn",amount:"200g",basePrice:0.80,aisle:"Tinned Goods"},{name:"Lime",amount:"1",basePrice:0.30,aisle:"Produce"},{name:"Salsa",amount:"100g",basePrice:1.20,aisle:"World Foods"}]},
-  { id:14,name:"Roasted Cauliflower Steaks",category:"Plant-Based",health:9,tags:["vegan","gluten-free"],
+  { id:14,img:"🥦",name:"Roasted Cauliflower Steaks",category:"Plant-Based",health:9,tags:["vegan","gluten-free"],
     method:["Cut cauliflower into thick steaks through the core.","Brush with olive oil, season generously.","Roast at 220°C for 25 mins until deeply golden.","Warm chickpeas with lemon juice and tahini.","Serve cauliflower over chickpeas with fresh salad."],
     baseIngredients:[{name:"Cauliflower",amount:"1 large",basePrice:1.20,aisle:"Produce"},{name:"Tahini",amount:"2 tbsp",basePrice:0.60,aisle:"World Foods"},{name:"Cherry Tomatoes",amount:"200g",basePrice:1.50,aisle:"Produce"},{name:"Chickpeas",amount:"400g tin",basePrice:0.80,aisle:"Tinned Goods"},{name:"Lemon",amount:"1",basePrice:0.40,aisle:"Produce"},{name:"Mixed Salad",amount:"100g",basePrice:1.00,aisle:"Produce"}]},
-  { id:15,name:"Sweet Potato & Black Bean Chilli",category:"Plant-Based",health:9,tags:["vegan","gluten-free"],
+  { id:15,img:"🌶️",name:"Sweet Potato & Black Bean Chilli",category:"Plant-Based",health:9,tags:["vegan","gluten-free"],
     method:["Peel and cube sweet potatoes.","Sauté onion, add chilli powder and cook 1 min.","Add sweet potato, black beans, and tinned tomatoes.","Simmer for 25 mins until sweet potato is tender.","Serve over rice with lime wedges."],
     baseIngredients:[{name:"Sweet Potatoes",amount:"2 large",basePrice:1.40,aisle:"Produce"},{name:"Black Beans",amount:"400g tin",basePrice:0.80,aisle:"Tinned Goods"},{name:"Tinned Tomatoes",amount:"400g",basePrice:0.80,aisle:"Tinned Goods"},{name:"Onion",amount:"1",basePrice:0.25,aisle:"Produce"},{name:"Chilli Powder",amount:"1 tsp",basePrice:0.15,aisle:"Spices"},{name:"Rice",amount:"300g",basePrice:0.80,aisle:"Pasta & Rice"}]},
-  { id:16,name:"Vegan Pad Thai",category:"Plant-Based",health:8,tags:["vegan","gluten-free"],
+  { id:16,img:"🍜",name:"Vegan Pad Thai",category:"Plant-Based",health:8,tags:["vegan","gluten-free"],
     method:["Soak rice noodles in boiling water until tender.","Press and cube tofu, fry until crispy.","Make sauce with tamari, lime juice, and a touch of sugar.","Toss noodles with bean sprouts, spring onions and sauce.","Top with crushed peanuts and lime wedges."],
     baseIngredients:[{name:"Rice Noodles",amount:"300g",basePrice:1.40,aisle:"World Foods"},{name:"Firm Tofu",amount:"300g",basePrice:2.00,aisle:"Chilled"},{name:"Bean Sprouts",amount:"150g",basePrice:0.80,aisle:"Produce"},{name:"Peanuts",amount:"50g",basePrice:0.60,aisle:"Snacks"},{name:"Lime",amount:"2",basePrice:0.60,aisle:"Produce"},{name:"Spring Onions",amount:"bunch",basePrice:0.60,aisle:"Produce"}]},
-  { id:17,name:"Mediterranean Roasted Veg & Couscous",category:"Plant-Based",health:8,tags:["vegan"],
+  { id:17,img:"🫒",name:"Mediterranean Roasted Veg & Couscous",category:"Plant-Based",health:8,tags:["vegan"],
     method:["Chop courgette, aubergine and peppers into chunks.","Toss with olive oil and roast at 200°C for 30 mins.","Prepare couscous with boiling water and cover for 5 mins.","Fluff couscous with a fork, mix in fresh mint.","Serve roasted veg over herby couscous."],
     baseIngredients:[{name:"Courgette",amount:"2",basePrice:1.00,aisle:"Produce"},{name:"Aubergine",amount:"1",basePrice:0.90,aisle:"Produce"},{name:"Bell Peppers",amount:"2",basePrice:1.40,aisle:"Produce"},{name:"Couscous",amount:"300g",basePrice:1.00,aisle:"Pasta & Rice"},{name:"Olive Oil",amount:"3 tbsp",basePrice:0.60,aisle:"Oils"},{name:"Fresh Mint",amount:"bunch",basePrice:0.70,aisle:"Produce"}]},
-  { id:18,name:"Mushroom & Walnut Bolognese",category:"Plant-Based",health:8,tags:["vegan"],
+  { id:18,img:"🍄",name:"Mushroom & Walnut Bolognese",category:"Plant-Based",health:8,tags:["vegan"],
     method:["Finely chop mushrooms and pulse walnuts in a blender.","Sauté onion and garlic until soft.","Add mushrooms and walnuts, cook until browned.","Pour in tinned tomatoes, simmer 20 mins.","Serve over spaghetti."],
     baseIngredients:[{name:"Mushrooms",amount:"400g",basePrice:1.60,aisle:"Produce"},{name:"Walnuts",amount:"100g",basePrice:1.50,aisle:"Baking"},{name:"Spaghetti",amount:"400g",basePrice:1.50,aisle:"Pasta & Rice"},{name:"Tinned Tomatoes",amount:"400g",basePrice:0.80,aisle:"Tinned Goods"},{name:"Onion",amount:"1",basePrice:0.25,aisle:"Produce"},{name:"Garlic",amount:"3 cloves",basePrice:0.30,aisle:"Produce"}]},
-  { id:19,name:"Moroccan Vegetable Tagine",category:"Plant-Based",health:9,tags:["vegan","gluten-free"],
+  { id:19,img:"🫕",name:"Moroccan Vegetable Tagine",category:"Plant-Based",health:9,tags:["vegan","gluten-free"],
     method:["Peel and cube butternut squash.","Sauté onion, add ras el hanout and cook 1 min.","Add squash, chickpeas, tomatoes, and apricots.","Simmer for 30 mins until squash is tender.","Serve with fluffy couscous."],
     baseIngredients:[{name:"Chickpeas",amount:"400g tin",basePrice:0.80,aisle:"Tinned Goods"},{name:"Butternut Squash",amount:"1 small",basePrice:1.20,aisle:"Produce"},{name:"Dried Apricots",amount:"80g",basePrice:1.00,aisle:"Dried Fruit"},{name:"Tinned Tomatoes",amount:"400g",basePrice:0.80,aisle:"Tinned Goods"},{name:"Ras El Hanout",amount:"2 tsp",basePrice:0.40,aisle:"Spices"},{name:"Couscous",amount:"200g",basePrice:0.70,aisle:"Pasta & Rice"}]},
-  { id:20,name:"Mushroom Risotto",category:"Vegetarian",health:7,tags:["vegetarian","gluten-free"],
+  { id:20,img:"🍚",name:"Mushroom Risotto",category:"Vegetarian",health:7,tags:["vegetarian","gluten-free"],
     method:["Slice mushrooms and sauté until golden. Set aside.","Sauté onion in butter, add arborio rice and stir 1 min.","Add stock a ladle at a time, stirring continuously.","When rice is creamy and tender (about 20 mins), stir in mushrooms.","Finish with parmesan and a knob of butter."],
     baseIngredients:[{name:"Arborio Rice",amount:"300g",basePrice:1.80,aisle:"Pasta & Rice"},{name:"Mushrooms",amount:"300g",basePrice:1.50,aisle:"Produce"},{name:"Onion",amount:"1",basePrice:0.25,aisle:"Produce"},{name:"Vegetable Stock",amount:"1L",basePrice:0.60,aisle:"Tinned Goods"},{name:"Parmesan",amount:"50g",basePrice:1.20,aisle:"Dairy"},{name:"Butter",amount:"20g",basePrice:0.20,aisle:"Dairy"}]},
-  { id:21,name:"Spinach & Ricotta Stuffed Shells",category:"Vegetarian",health:7,tags:["vegetarian"],
+  { id:21,img:"🐚",name:"Spinach & Ricotta Stuffed Shells",category:"Vegetarian",health:7,tags:["vegetarian"],
     method:["Cook pasta shells until just al dente.","Mix ricotta with wilted spinach, garlic and seasoning.","Spread passata in a baking dish.","Stuff each shell with the ricotta mixture, place in dish.","Top with mozzarella and bake at 190°C for 20 mins."],
     baseIngredients:[{name:"Conchiglioni Pasta",amount:"300g",basePrice:1.80,aisle:"Pasta & Rice"},{name:"Ricotta",amount:"250g",basePrice:1.60,aisle:"Dairy"},{name:"Spinach",amount:"200g",basePrice:1.00,aisle:"Produce"},{name:"Passata",amount:"500g",basePrice:0.90,aisle:"Tinned Goods"},{name:"Mozzarella",amount:"125g",basePrice:0.80,aisle:"Dairy"},{name:"Garlic",amount:"2 cloves",basePrice:0.20,aisle:"Produce"}]},
-  { id:22,name:"Cheese & Onion Quiche with Salad",category:"Vegetarian",health:6,tags:["vegetarian"],
+  { id:22,img:"🧀",name:"Cheese & Onion Quiche with Salad",category:"Vegetarian",health:6,tags:["vegetarian"],
     method:["Line a tart tin with pastry and blind bake for 10 mins.","Caramelise sliced onions slowly over low heat.","Whisk eggs with cream and most of the cheese.","Layer onions in pastry, pour over egg mix, top with remaining cheese.","Bake at 180°C for 30 mins. Serve with mixed salad."],
     baseIngredients:[{name:"Shortcrust Pastry",amount:"1 roll",basePrice:1.20,aisle:"Chilled"},{name:"Eggs",amount:"4",basePrice:1.20,aisle:"Dairy"},{name:"Double Cream",amount:"200ml",basePrice:0.90,aisle:"Dairy"},{name:"Cheddar Cheese",amount:"150g",basePrice:1.80,aisle:"Dairy"},{name:"Onion",amount:"2",basePrice:0.50,aisle:"Produce"},{name:"Mixed Salad",amount:"100g",basePrice:1.00,aisle:"Produce"}]},
-  { id:23,name:"Vegetable Lasagne",category:"Vegetarian",health:7,tags:["vegetarian"],
+  { id:23,img:"🫕",name:"Vegetable Lasagne",category:"Vegetarian",health:7,tags:["vegetarian"],
     method:["Slice courgettes and wilt spinach.","Layer passata, lasagne sheets, vegetables, and ricotta.","Repeat layers, finishing with mozzarella on top.","Bake at 190°C for 35-40 mins until golden and bubbling.","Rest for 10 mins before serving."],
     baseIngredients:[{name:"Lasagne Sheets",amount:"250g",basePrice:1.00,aisle:"Pasta & Rice"},{name:"Courgette",amount:"2",basePrice:1.00,aisle:"Produce"},{name:"Spinach",amount:"200g",basePrice:1.00,aisle:"Produce"},{name:"Ricotta",amount:"250g",basePrice:1.60,aisle:"Dairy"},{name:"Passata",amount:"500g",basePrice:0.90,aisle:"Tinned Goods"},{name:"Mozzarella",amount:"125g",basePrice:0.80,aisle:"Dairy"}]},
-  { id:24,name:"Halloumi & Roasted Veg Wraps",category:"Vegetarian",health:7,tags:["vegetarian"],
+  { id:24,img:"🫔",name:"Halloumi & Roasted Veg Wraps",category:"Vegetarian",health:7,tags:["vegetarian"],
     method:["Slice courgette and pepper, roast at 200°C for 20 mins.","Slice and grill halloumi until golden on each side.","Warm tortillas briefly.","Spread hummus on tortillas, add roasted veg and halloumi.","Add mixed leaves and roll up tightly."],
     baseIngredients:[{name:"Halloumi",amount:"250g",basePrice:2.50,aisle:"Dairy"},{name:"Flour Tortillas",amount:"6 pack",basePrice:1.20,aisle:"Bakery"},{name:"Courgette",amount:"1",basePrice:0.50,aisle:"Produce"},{name:"Bell Pepper",amount:"1",basePrice:0.70,aisle:"Produce"},{name:"Hummus",amount:"200g",basePrice:1.20,aisle:"Chilled"},{name:"Mixed Leaves",amount:"80g",basePrice:0.90,aisle:"Produce"}]},
-  { id:25,name:"Egg Fried Rice",category:"Vegetarian",health:6,tags:["vegetarian","gluten-free"],
+  { id:25,img:"🍳",name:"Egg Fried Rice",category:"Vegetarian",health:6,tags:["vegetarian","gluten-free"],
     method:["Cook rice and spread on a tray to cool completely.","Dice carrots and cook with peas in sesame oil.","Push veg aside, scramble eggs in the same pan.","Add cold rice, toss everything together on high heat.","Finish with sliced spring onions."],
     baseIngredients:[{name:"Rice",amount:"400g",basePrice:1.00,aisle:"Pasta & Rice"},{name:"Eggs",amount:"4",basePrice:1.20,aisle:"Dairy"},{name:"Frozen Peas",amount:"150g",basePrice:0.60,aisle:"Frozen"},{name:"Carrots",amount:"2",basePrice:0.30,aisle:"Produce"},{name:"Spring Onions",amount:"bunch",basePrice:0.60,aisle:"Produce"},{name:"Sesame Oil",amount:"1 tbsp",basePrice:0.25,aisle:"Oils"}]},
-  { id:26,name:"Mac & Cheese",category:"Vegetarian",health:5,tags:["vegetarian"],
+  { id:26,img:"🧀",name:"Mac & Cheese",category:"Vegetarian",health:5,tags:["vegetarian"],
     method:["Cook macaroni until al dente.","Melt butter in a saucepan, stir in flour to make a roux.","Gradually add milk, stirring until smooth and thick.","Add most of the cheese and mustard, stir until melted.","Combine with pasta, top with remaining cheese, grill until golden."],
     baseIngredients:[{name:"Macaroni Pasta",amount:"400g",basePrice:1.00,aisle:"Pasta & Rice"},{name:"Cheddar Cheese",amount:"200g",basePrice:2.20,aisle:"Dairy"},{name:"Milk",amount:"400ml",basePrice:0.50,aisle:"Dairy"},{name:"Butter",amount:"30g",basePrice:0.25,aisle:"Dairy"},{name:"Plain Flour",amount:"30g",basePrice:0.10,aisle:"Baking"}]},
-  { id:27,name:"Salmon with Sweet Potato Mash",category:"Fish",health:10,tags:["gluten-free"],
+  { id:27,img:"🐟",name:"Salmon with Sweet Potato Mash",category:"Fish",health:10,tags:["gluten-free"],
     method:["Peel and boil sweet potatoes until tender.","Mash with butter and season well.","Pan-fry salmon fillets skin-side down for 4 mins.","Flip and cook 3 more mins until just cooked through.","Steam green beans and serve with a lemon squeeze."],
     baseIngredients:[{name:"Salmon Fillets",amount:"2 fillets",basePrice:6.00,aisle:"Fish"},{name:"Sweet Potatoes",amount:"3",basePrice:1.80,aisle:"Produce"},{name:"Green Beans",amount:"200g",basePrice:1.20,aisle:"Produce"},{name:"Butter",amount:"1 tbsp",basePrice:0.20,aisle:"Dairy"},{name:"Lemon",amount:"1",basePrice:0.40,aisle:"Produce"}]},
-  { id:28,name:"Baked Cod with Roasted Potatoes",category:"Fish",health:8,tags:["gluten-free"],
+  { id:28,img:"🐠",name:"Baked Cod with Roasted Potatoes",category:"Fish",health:8,tags:["gluten-free"],
     method:["Cube potatoes and toss with olive oil, roast at 200°C for 20 mins.","Halve cherry tomatoes and add to potatoes.","Place cod fillets on top, drizzle with oil and herbs.","Bake for 12-15 mins until cod flakes easily.","Serve immediately with all the pan juices."],
     baseIngredients:[{name:"Cod Fillets",amount:"2 fillets",basePrice:4.50,aisle:"Fish"},{name:"Potatoes",amount:"500g",basePrice:0.80,aisle:"Produce"},{name:"Cherry Tomatoes",amount:"200g",basePrice:1.50,aisle:"Produce"},{name:"Olive Oil",amount:"2 tbsp",basePrice:0.40,aisle:"Oils"},{name:"Fresh Herbs",amount:"bunch",basePrice:0.80,aisle:"Produce"}]},
-  { id:29,name:"Prawn Stir Fry Noodles",category:"Fish",health:7,tags:[],
+  { id:29,img:"🦐",name:"Prawn Stir Fry Noodles",category:"Fish",health:7,tags:[],
     method:["Cook egg noodles according to packet, drain.","Stir-fry prawns with ginger until pink.","Add halved pak choi and cook 2 mins.","Toss in noodles with soy sauce and spring onions.","Serve immediately while hot."],
     baseIngredients:[{name:"Prawns",amount:"300g",basePrice:4.50,aisle:"Fish"},{name:"Egg Noodles",amount:"300g",basePrice:1.00,aisle:"World Foods"},{name:"Pak Choi",amount:"2 heads",basePrice:1.20,aisle:"Produce"},{name:"Soy Sauce",amount:"2 tbsp",basePrice:0.30,aisle:"World Foods"},{name:"Ginger",amount:"thumb",basePrice:0.30,aisle:"Produce"},{name:"Spring Onions",amount:"bunch",basePrice:0.60,aisle:"Produce"}]},
-  { id:30,name:"Tuna Nicoise Salad",category:"Fish",health:9,tags:["gluten-free"],
+  { id:30,img:"🥗",name:"Tuna Nicoise Salad",category:"Fish",health:9,tags:["gluten-free"],
     method:["Boil new potatoes and green beans until just tender.","Hard boil eggs for 8 mins, cool and halve.","Sear tuna steaks 2 mins each side for rare.","Arrange leaves, potatoes, beans, eggs and olives on plates.","Slice tuna and lay on top. Dress with olive oil and lemon."],
     baseIngredients:[{name:"Tuna Steaks",amount:"2",basePrice:5.00,aisle:"Fish"},{name:"New Potatoes",amount:"300g",basePrice:0.80,aisle:"Produce"},{name:"Green Beans",amount:"150g",basePrice:1.00,aisle:"Produce"},{name:"Eggs",amount:"2",basePrice:0.60,aisle:"Dairy"},{name:"Olives",amount:"80g",basePrice:1.00,aisle:"Tinned Goods"},{name:"Mixed Leaves",amount:"100g",basePrice:1.00,aisle:"Produce"}]},
-  { id:31,name:"Teriyaki Salmon Bowl",category:"Fish",health:9,tags:["gluten-free"],
+  { id:31,img:"🍣",name:"Teriyaki Salmon Bowl",category:"Fish",health:9,tags:["gluten-free"],
     method:["Marinate salmon in tamari, ginger, and a touch of honey.","Cook rice and prepare edamame beans.","Pan-fry or bake salmon for 10 mins.","Slice avocado.","Assemble bowls with rice, salmon, edamame, and avocado."],
     baseIngredients:[{name:"Salmon Fillets",amount:"2",basePrice:6.00,aisle:"Fish"},{name:"Rice",amount:"300g",basePrice:0.80,aisle:"Pasta & Rice"},{name:"Edamame Beans",amount:"150g",basePrice:1.50,aisle:"Frozen"},{name:"Avocado",amount:"1",basePrice:1.50,aisle:"Produce"},{name:"Tamari",amount:"3 tbsp",basePrice:0.50,aisle:"World Foods"},{name:"Ginger",amount:"thumb",basePrice:0.30,aisle:"Produce"}]},
-  { id:32,name:"Chicken Caesar Salad",category:"Quick",health:7,tags:[],
+  { id:32,img:"🥗",name:"Chicken Caesar Salad",category:"Quick",health:7,tags:[],
     method:["Season and pan-fry chicken breast until cooked, then slice.","Wash and chop romaine lettuce.","Toss lettuce with caesar dressing.","Top with sliced chicken, croutons, and shaved parmesan.","Serve immediately."],
     baseIngredients:[{name:"Chicken Breast",amount:"300g",basePrice:3.50,aisle:"Meat"},{name:"Romaine Lettuce",amount:"1 head",basePrice:0.90,aisle:"Produce"},{name:"Parmesan",amount:"50g",basePrice:1.20,aisle:"Dairy"},{name:"Croutons",amount:"100g",basePrice:1.00,aisle:"Bakery"},{name:"Caesar Dressing",amount:"100ml",basePrice:1.50,aisle:"Chilled"}]},
-  { id:33,name:"Omelette with Side Salad",category:"Quick",health:8,tags:["vegetarian","gluten-free"],
+  { id:33,img:"🍳",name:"Omelette with Side Salad",category:"Quick",health:8,tags:["vegetarian","gluten-free"],
     method:["Beat eggs with seasoning.","Sauté mushrooms in butter until golden.","Pour eggs into a hot non-stick pan.","When nearly set, add cheese and mushrooms to one side.","Fold over and serve with tomato and leaf salad."],
     baseIngredients:[{name:"Eggs",amount:"6",basePrice:1.80,aisle:"Dairy"},{name:"Cheddar Cheese",amount:"80g",basePrice:1.00,aisle:"Dairy"},{name:"Mushrooms",amount:"100g",basePrice:0.80,aisle:"Produce"},{name:"Tomatoes",amount:"2",basePrice:0.60,aisle:"Produce"},{name:"Mixed Leaves",amount:"80g",basePrice:0.90,aisle:"Produce"},{name:"Butter",amount:"1 tbsp",basePrice:0.15,aisle:"Dairy"}]},
-  { id:34,name:"Jacket Potato with Beans & Cheese",category:"Quick",health:6,tags:["vegetarian","gluten-free"],
+  { id:34,img:"🥔",name:"Jacket Potato with Beans & Cheese",category:"Quick",health:6,tags:["vegetarian","gluten-free"],
     method:["Prick potatoes and bake at 200°C for 1 hour until crispy.","Heat baked beans in a saucepan.","Cut open potatoes and add butter.","Top generously with hot beans and grated cheese.","Serve with a simple side salad."],
     baseIngredients:[{name:"Baking Potatoes",amount:"4 large",basePrice:1.40,aisle:"Produce"},{name:"Baked Beans",amount:"400g",basePrice:0.50,aisle:"Tinned Goods"},{name:"Cheddar Cheese",amount:"150g",basePrice:1.80,aisle:"Dairy"},{name:"Butter",amount:"2 tbsp",basePrice:0.25,aisle:"Dairy"},{name:"Side Salad",amount:"100g",basePrice:1.00,aisle:"Produce"}]},
-  { id:35,name:"Creamy Chicken Pasta Bake",category:"Comfort",health:6,tags:[],
+  { id:35,img:"🍝",name:"Creamy Chicken Pasta Bake",category:"Comfort",health:6,tags:[],
     method:["Cook penne until al dente.","Dice and fry chicken with garlic until golden.","Add cream and sweetcorn, simmer 5 mins.","Mix with pasta, transfer to baking dish, top with cheese.","Bake at 190°C for 20 mins until golden and bubbling."],
     baseIngredients:[{name:"Chicken Breast",amount:"400g",basePrice:4.50,aisle:"Meat"},{name:"Penne Pasta",amount:"400g",basePrice:1.20,aisle:"Pasta & Rice"},{name:"Double Cream",amount:"300ml",basePrice:1.20,aisle:"Dairy"},{name:"Cheddar Cheese",amount:"100g",basePrice:1.50,aisle:"Dairy"},{name:"Sweetcorn",amount:"200g",basePrice:0.80,aisle:"Tinned Goods"},{name:"Garlic",amount:"2 cloves",basePrice:0.20,aisle:"Produce"}]},
-  { id:36,name:"Sausage Casserole",category:"Comfort",health:5,tags:["gluten-free"],
+  { id:36,img:"🌭",name:"Sausage Casserole",category:"Comfort",health:5,tags:["gluten-free"],
     method:["Brown sausages in a large pot.","Add sliced onion and cook until soft.","Pour in beans, tinned tomatoes, and cubed potatoes.","Season and simmer for 30 mins until potatoes are tender.","Serve hot straight from the pot."],
     baseIngredients:[{name:"Pork Sausages",amount:"8",basePrice:2.80,aisle:"Meat"},{name:"Baked Beans",amount:"400g",basePrice:0.50,aisle:"Tinned Goods"},{name:"Tinned Tomatoes",amount:"400g",basePrice:0.80,aisle:"Tinned Goods"},{name:"Onion",amount:"1",basePrice:0.25,aisle:"Produce"},{name:"Potatoes",amount:"500g",basePrice:0.80,aisle:"Produce"}]},
-  { id:37,name:"Thai Green Curry",category:"World",health:7,tags:["gluten-free"],
+  { id:37,img:"🍛",name:"Thai Green Curry",category:"World",health:7,tags:["gluten-free"],
     method:["Slice chicken into strips.","Fry curry paste for 1 min, add coconut milk.","Add chicken, baby corn, and mange tout.","Simmer 15 mins until chicken is cooked through.","Serve over jasmine rice with fresh basil."],
     baseIngredients:[{name:"Chicken Breast",amount:"400g",basePrice:4.50,aisle:"Meat"},{name:"Coconut Milk",amount:"400ml",basePrice:1.20,aisle:"World Foods"},{name:"Green Curry Paste",amount:"2 tbsp",basePrice:0.70,aisle:"World Foods"},{name:"Baby Corn",amount:"100g",basePrice:0.90,aisle:"Produce"},{name:"Mange Tout",amount:"100g",basePrice:1.00,aisle:"Produce"},{name:"Jasmine Rice",amount:"300g",basePrice:1.00,aisle:"Pasta & Rice"}]},
-  { id:38,name:"Lamb Kofta with Flatbread",category:"World",health:7,tags:[],
+  { id:38,img:"🥙",name:"Lamb Kofta with Flatbread",category:"World",health:7,tags:[],
     method:["Mix lamb mince with cumin, salt, pepper, and grated onion.","Shape into oval koftas around skewers.","Grill for 10-12 mins, turning occasionally.","Mix yoghurt with grated cucumber for raita.","Serve in warm flatbreads with red onion and raita."],
     baseIngredients:[{name:"Lamb Mince",amount:"500g",basePrice:5.50,aisle:"Meat"},{name:"Flatbreads",amount:"4 pack",basePrice:1.20,aisle:"Bakery"},{name:"Cucumber",amount:"1",basePrice:0.50,aisle:"Produce"},{name:"Greek Yoghurt",amount:"200g",basePrice:1.00,aisle:"Dairy"},{name:"Red Onion",amount:"1",basePrice:0.30,aisle:"Produce"},{name:"Cumin",amount:"1 tsp",basePrice:0.15,aisle:"Spices"}]},
-  { id:39,name:"Dhal with Naan",category:"World",health:8,tags:["vegetarian"],
+  { id:39,img:"🫓",name:"Dhal with Naan",category:"World",health:8,tags:["vegetarian"],
     method:["Rinse lentils and simmer with turmeric until soft.","Sauté onion and garlic in a separate pan.","Add coconut milk to lentils and stir through.","Mix in the sautéed onion and garlic.","Warm naan breads and serve alongside."],
     baseIngredients:[{name:"Red Lentils",amount:"300g",basePrice:1.20,aisle:"Pulses"},{name:"Coconut Milk",amount:"400ml",basePrice:1.20,aisle:"World Foods"},{name:"Naan Bread",amount:"4 pack",basePrice:1.20,aisle:"Bakery"},{name:"Onion",amount:"1",basePrice:0.25,aisle:"Produce"},{name:"Garlic",amount:"3 cloves",basePrice:0.30,aisle:"Produce"},{name:"Turmeric",amount:"1 tsp",basePrice:0.15,aisle:"Spices"}]},
-  { id:40,name:"Korean Bibimbap",category:"World",health:8,tags:["gluten-free"],
+  { id:40,img:"🍚",name:"Korean Bibimbap",category:"World",health:8,tags:["gluten-free"],
     method:["Cook rice and keep warm.","Brown beef mince with gochujang paste.","Sauté spinach and julienne carrots separately.","Fry eggs sunny-side up.","Assemble bowls: rice, veg, beef, topped with a fried egg."],
     baseIngredients:[{name:"Rice",amount:"400g",basePrice:1.00,aisle:"Pasta & Rice"},{name:"Beef Mince",amount:"300g",basePrice:3.50,aisle:"Meat"},{name:"Eggs",amount:"4",basePrice:1.20,aisle:"Dairy"},{name:"Spinach",amount:"200g",basePrice:1.00,aisle:"Produce"},{name:"Carrots",amount:"2",basePrice:0.30,aisle:"Produce"},{name:"Gochujang Paste",amount:"2 tbsp",basePrice:0.80,aisle:"World Foods"}]},
 ];
@@ -539,6 +539,7 @@ export default function App(){
           <button onClick={()=>setViewRecipe(null)} style={{...gb,padding:"6px 10px",fontSize:12}}>← Back</button>
         </div>
         <div style={cnt}>
+          <div style={{fontSize:48,marginBottom:8}}>{meal.img||"🍽️"}</div>
           <h2 style={{fontFamily:"'Fraunces',serif",fontSize:22,fontWeight:800,margin:"0 0 8px",lineHeight:1.2}}>{meal.name}</h2>
           <div style={{display:"flex",gap:5,flexWrap:"wrap",alignItems:"center",marginBottom:4}}>
             <span style={{fontSize:10,color:ts,fontFamily:"'JetBrains Mono',monospace"}}>{meal.category}</span>
@@ -583,24 +584,22 @@ export default function App(){
     <div style={wrap}>{fonts}
       <div style={hdr}><div style={{fontSize:10,letterSpacing:4,color:acd,fontFamily:"'JetBrains Mono',monospace",fontWeight:500,marginBottom:5}}>SMART MEAL PLANNING</div><h1 style={{fontFamily:"'Fraunces',serif",fontSize:40,fontWeight:900,margin:0,lineHeight:1.05}}>troll<span style={{color:ac}}>ii</span></h1><p style={{color:ts,fontSize:12,marginTop:6}}>Plan meals · Track budget · Shop smarter</p></div>
       <div style={cnt}>
-        <div style={{marginBottom:24}}>
-          <label style={{fontSize:10,letterSpacing:2,color:ts,fontFamily:"'JetBrains Mono',monospace",display:"block",marginBottom:8}}>CURRENCY</label>
-          {detectedLoc&&!showCurDrop&&<div style={{fontSize:11,color:acd,marginBottom:6,fontFamily:"'JetBrains Mono',monospace"}}>📍 Detected: {detectedLoc}</div>}
-          <div style={{display:"flex",alignItems:"center",gap:8}}>
-            <div onClick={()=>setShowCurDrop(!showCurDrop)} style={{flex:1,background:sf,border:`1px solid ${showCurDrop?ac:"#262e20"}`,borderRadius:10,padding:"12px 14px",cursor:"pointer",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-              <span style={{fontSize:15,fontWeight:600}}>{cur?`${curSym} ${curCode}`:"Detecting…"} <span style={{fontSize:12,fontWeight:400,color:ts}}>{cur?curName:""}</span></span>
-              <span style={{color:ts,fontSize:12}}>{showCurDrop?"▲":"▼"}</span>
-            </div>
+        {/* Currency — auto-detected, shown as a small pill. Tap to change. */}
+        <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:20,background:cd,borderRadius:10,padding:"10px 14px",border:`1px solid ${sf}`}}>
+          <div style={{display:"flex",alignItems:"center",gap:6}}>
+            {detectedLoc&&<span style={{fontSize:10,color:acd,fontFamily:"'JetBrains Mono',monospace"}}>📍 {detectedLoc}</span>}
+            <span style={{fontSize:13,fontWeight:600,color:tp}}>{cur?`${curSym} ${curCode}`:""}</span>
           </div>
-          {showCurDrop&&<div style={{background:cd,border:`1px solid ${sf}`,borderRadius:10,marginTop:6,overflow:"hidden"}}>
-            {CURRENCIES.map(cr=>(
-              <div key={cr.code} onClick={()=>{setCur(cr);setShops([]);setShowCurDrop(false);}} style={{padding:"11px 14px",cursor:"pointer",display:"flex",justifyContent:"space-between",alignItems:"center",background:cur&&curCode===cr.code?ac+"12":"transparent",borderBottom:`1px solid ${sf}`}}>
-                <span style={{fontSize:14,fontWeight:cur&&curCode===cr.code?600:400}}>{cr.symbol} {cr.code} <span style={{fontSize:12,color:ts}}>{cr.name}</span></span>
-                {cur&&curCode===cr.code&&<span style={{color:ac,fontSize:12,fontWeight:700}}>✓</span>}
-              </div>
-            ))}
-          </div>}
+          <button onClick={()=>setShowCurDrop(!showCurDrop)} style={{...bb,background:showCurDrop?ac+"15":"transparent",fontSize:10,color:showCurDrop?ac:ts,padding:"4px 8px",border:`1px solid ${showCurDrop?acd:sf}`,borderRadius:6}}>Change</button>
         </div>
+        {showCurDrop&&<div style={{background:cd,border:`1px solid ${sf}`,borderRadius:10,marginBottom:16,marginTop:-12,overflow:"hidden"}}>
+          {CURRENCIES.map(cr=>(
+            <div key={cr.code} onClick={()=>{setCur(cr);setShops([]);setShowCurDrop(false);}} style={{padding:"10px 14px",cursor:"pointer",display:"flex",justifyContent:"space-between",alignItems:"center",background:cur&&curCode===cr.code?ac+"12":"transparent",borderBottom:`1px solid ${sf}`}}>
+              <span style={{fontSize:13,fontWeight:cur&&curCode===cr.code?600:400}}>{cr.symbol} {cr.code} <span style={{fontSize:11,color:ts}}>{cr.name}</span></span>
+              {cur&&curCode===cr.code&&<span style={{color:ac,fontSize:11,fontWeight:700}}>✓</span>}
+            </div>
+          ))}
+        </div>}
         <div style={{marginBottom:24}}><label style={{fontSize:10,letterSpacing:2,color:ts,fontFamily:"'JetBrains Mono',monospace",display:"block",marginBottom:4}}>YOUR SHOPS <span style={{color:ac,fontSize:8}}>first = primary</span></label><div style={{display:"flex",flexWrap:"wrap",gap:6,marginTop:6}}>{(POP_SHOPS[curCode]||[]).map(sh=><button key={sh} onClick={()=>tShop(sh)} style={{...gb,fontSize:11,padding:"6px 11px",...(shops.includes(sh)?{background:ac+"18",borderColor:ac,color:ac}:{})}}>{shops.indexOf(sh)===0?"★ ":""}{sh}</button>)}</div><div style={{display:"flex",gap:6,marginTop:8}}><input value={cShop} onChange={e=>setCShop(e.target.value)} placeholder="Custom shop…" style={{...inp,flex:1,fontSize:13}} onKeyDown={e=>e.key==="Enter"&&addShop()}/><button onClick={addShop} style={{...gb,color:ac,borderColor:acd,padding:"9px 14px"}}>+</button></div></div>
         <div style={{marginBottom:24}}><label style={{fontSize:10,letterSpacing:2,color:ts,fontFamily:"'JetBrains Mono',monospace",display:"block",marginBottom:8}}>FAMILY SIZE</label><div style={{display:"flex",alignItems:"center",gap:12}}><button onClick={()=>setFam(Math.max(1,fam-1))} style={{...gb,width:40,height:40,fontSize:18,padding:0,display:"flex",alignItems:"center",justifyContent:"center"}}>−</button><span style={{fontSize:34,fontFamily:"'Fraunces',serif",fontWeight:800,minWidth:40,textAlign:"center"}}>{fam}</span><button onClick={()=>setFam(fam+1)} style={{...gb,width:40,height:40,fontSize:18,padding:0,display:"flex",alignItems:"center",justifyContent:"center"}}>+</button><span style={{color:ts,fontSize:12}}>people</span></div></div>
         <div style={{marginBottom:32}}><label style={{fontSize:10,letterSpacing:2,color:ts,fontFamily:"'JetBrains Mono',monospace",display:"block",marginBottom:8}}>WEEKLY BUDGET</label><div style={{position:"relative"}}><span style={{position:"absolute",left:14,top:"50%",transform:"translateY(-50%)",color:ac,fontSize:17,fontWeight:700}}>{curSym}</span><input value={bud} onChange={e=>setBud(e.target.value.replace(/[^0-9.]/g,""))} placeholder="0.00" inputMode="decimal" style={{...inp,paddingLeft:34,fontSize:20,fontFamily:"'JetBrains Mono',monospace",fontWeight:500}}/></div></div>
@@ -623,9 +622,10 @@ export default function App(){
           {filtered.map(meal=>{const cost=meal.baseIngredients.reduce((s,ig)=>s+gp(ig.basePrice,ps,curCode),0)*sc;
             return(
               <div key={meal.id} style={{background:cd,border:`1px solid ${sf}`,borderRadius:11,padding:"12px 14px",cursor:"pointer",transition:"all 0.15s"}} onClick={()=>{setPlan(p=>({...p,[selDay]:meal.id}));setSelDay(null);setSrch("");setFCat("All");setFDiet([]);}}>
-                <div style={{display:"flex",justifyContent:"space-between",alignItems:"start"}}>
+                <div style={{display:"flex",alignItems:"start",gap:12}}>
+                  <div style={{fontSize:32,lineHeight:1,flexShrink:0,width:42,textAlign:"center"}}>{meal.img||"🍽️"}</div>
                   <div style={{flex:1,minWidth:0}}><div style={{fontSize:13,fontWeight:600,marginBottom:4,color:tp,lineHeight:1.3}}>{meal.name}</div><div style={{display:"flex",gap:4,alignItems:"center",flexWrap:"wrap"}}><span style={{fontSize:9,color:ts,fontFamily:"'JetBrains Mono',monospace"}}>{meal.category}</span><HB s={meal.health}/>{meal.tags.map(tg=><DB key={tg} t={tg}/>)}</div></div>
-                  <div style={{textAlign:"right",flexShrink:0,marginLeft:8}}>
+                  <div style={{textAlign:"right",flexShrink:0}}>
                     <div style={{fontSize:15,fontWeight:700,color:ac,fontFamily:"'JetBrains Mono',monospace"}}>{fmt(cost,curSym)}</div>
                     <div style={{display:"flex",gap:4,marginTop:4,justifyContent:"flex-end"}}>
                       <button onClick={e=>{e.stopPropagation();setViewRecipe(meal.id);}} style={{...gb,fontSize:9,padding:"2px 8px",color:ac,borderColor:acd}}>View Recipe</button>
@@ -733,7 +733,7 @@ export default function App(){
         <div style={{display:"flex",flexDirection:"column",gap:7,marginBottom:16}}>
           {DAYS.map(day=>{const md=meals.find(m=>m.day===day);const ml=md?.meal;
             return(<div key={day} onClick={()=>setSelDay(day)} style={{background:cd,borderRadius:11,padding:"12px 14px",border:`1px solid ${md?sf:"#262e20"}`,cursor:"pointer",borderStyle:md?"solid":"dashed",transition:"all 0.15s"}}>
-              <div style={{display:"flex",justifyContent:"space-between",alignItems:"start"}}><div style={{flex:1,minWidth:0}}><div style={{fontSize:9,color:ts,fontFamily:"'JetBrains Mono',monospace",letterSpacing:1.5,marginBottom:2}}>{day.toUpperCase()}</div>{ml?<><div style={{fontSize:13,fontWeight:600,marginBottom:4,color:tp,lineHeight:1.3}}>{ml.name}</div><div style={{display:"flex",gap:3,flexWrap:"wrap",alignItems:"center"}}><HB s={ml.health}/>{ml.tags.map(tg=><DB key={tg} t={tg}/>)}</div></>:<div style={{fontSize:12,color:ts,fontStyle:"italic"}}>Tap to add meal</div>}</div>
+              <div style={{display:"flex",alignItems:"start",gap:10}}>{ml&&<div style={{fontSize:28,lineHeight:1,flexShrink:0}}>{ml.img||"🍽️"}</div>}<div style={{flex:1,minWidth:0}}><div style={{fontSize:9,color:ts,fontFamily:"'JetBrains Mono',monospace",letterSpacing:1.5,marginBottom:2}}>{day.toUpperCase()}</div>{ml?<><div style={{fontSize:13,fontWeight:600,marginBottom:4,color:tp,lineHeight:1.3}}>{ml.name}</div><div style={{display:"flex",gap:3,flexWrap:"wrap",alignItems:"center"}}><HB s={ml.health}/>{ml.tags.map(tg=><DB key={tg} t={tg}/>)}</div></>:<div style={{fontSize:12,color:ts,fontStyle:"italic"}}>Tap to add meal</div>}</div>
               {md?<div style={{textAlign:"right",flexShrink:0,marginLeft:8}}>
                 <div style={{fontSize:15,fontWeight:700,fontFamily:"'JetBrains Mono',monospace",color:ac}}>{fmt(md.total,curSym)}</div>
                 <div style={{display:"flex",gap:4,marginTop:3,justifyContent:"flex-end"}}>
